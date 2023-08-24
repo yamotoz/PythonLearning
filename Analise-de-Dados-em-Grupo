@@ -1,0 +1,21 @@
+homem = mulherbaixa = cont = pessoas = 0
+while True:
+    print("=" * 20)
+    print("CADASTRE UMA PESSOA")
+    print("=" * 20)
+    ida = int(input("idade:"))
+    if ida >= 18:
+        cont += 1
+    sex = str(input("SEXO: [M/F]".upper()))
+    if sex == 'M':
+        homem += 1
+    elif ida < 20 and sex == 'F':
+        mulherbaixa += 1
+    pergunta = int(input(("quer cadastrar mais alguem? 1= sim 2 =nao:[1/2]")))
+    if pergunta == 1:
+        pessoas += 1
+    elif pergunta == 2:
+        break
+print(f"total de pessoas com mais de 18 anos fora {cont}")
+print(f"ao todo temos {homem} homens cadastrados")
+print(f"e temos {mulherbaixa} mulheres com menos de 20 anos")
