@@ -1,0 +1,31 @@
+import ferramentas
+from time import sleep
+pergunta = int(input("deseja criar um arquivo para cadastro? 1-sim, 2-nao:"))
+if pergunta == 1:
+     arquivo = str(input("digite o nome do arquivo para cadastro"))
+     ferramentas.ArquivoCriar(arquivo)
+else:
+    print("ok")
+ferramentas.menu()
+while True:
+    try:
+        p = int(input("digite o que vc deseja:"))
+        if p >= 4:
+            print("\033[31mvalor errado tente novamente\033[m")
+    except(ValueError, TypeError):
+        print("\033[31mporfavor digite o numero novamente\033[m")
+    else:
+        if p == 1:
+            ferramentas.chave1('Ver pessoas cadastradas')
+            pergun = str(input("digite o arquivo que vc quer ler:"))
+            ferramentas.Lerarquivo(pergun)
+
+        if p == 2:
+            ferramentas.chave1('opção 2')
+            print("va até o nome do arquivo criado e digite seus nomes")
+            sleep(3)
+            ferramentas.menu()
+        if p == 3:
+            ferramentas.chave1('Saindo do sistema')
+            break
+        sleep(2)
