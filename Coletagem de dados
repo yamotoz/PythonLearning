@@ -1,0 +1,30 @@
+pessoas = dict()
+dadosN = list()
+dadosL = list()
+dadosS = dict()
+pe = 0
+muie = list()
+a = ''
+while True:
+    dadosN.append(str(input("Nome:")))
+    pessoas['nome'] = dadosN
+    pe += 1
+    dadosL.append(int(input("idade:")))
+    pessoas['idade'] = dadosL
+    dadosS["sexo"] = (str(input("sexo: [M/F]")))
+    pessoas['sexo'] = dadosS
+    quest = str(input("quer continuar?[S/N]"))
+    if quest in 'Nn':
+        break
+    elif quest not in 'SsNn':
+        print('ERRO----Digite novamente')
+        quest = str(input("quer continuar?[S/N]"))
+        if quest in 'Nn':
+            break
+
+print(f"ao todo temos {pe} pessoas cadastradas")
+print(f"a media de idade é {sum(dadosL) / pe}")
+print(f"as mulheres cadastradas foram" , end= '')
+for p in pessoas['sexo']:
+    if p in 'Ff':
+        print(f'{p["nome"]}')
