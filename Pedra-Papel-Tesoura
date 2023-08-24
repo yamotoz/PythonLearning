@@ -1,0 +1,33 @@
+from random import randint
+from time import sleep
+print("suas opções:")
+print("[ 0 ] PEDRA")
+print("[ 1 ] PAPEL")
+print("[ 2 ] TESOURA")
+pc = int(randint(0, 2))
+jogada = int(input("\033[36mqual é a sua jogada?=="))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO')
+sleep(1)
+print("\033[35ma escolha do jogador foi a de numero {}".format(pc))
+if jogada == pc:
+    print("essa jogada deu empate")
+elif jogada == 1 and pc == 2:
+    print("\033[31mvoce infelizmente perdeu cara kakakakakk")
+elif jogada == 1 and pc == 0:
+    print("\033[32mparabens vc ganhou")
+elif jogada == 2 and pc == 1:
+    print("\033[32mparabens vc ganhou")
+elif jogada == 2 and pc == 0:
+    print("\033[31minfelismente vc perdeu kakakak")
+elif jogada == 0 and pc == 1:
+    print("\033[31minfelizmente vc perdeu kkkkkkkkkkk")
+elif jogada == 0  and pc == 2:
+    print("\033[32mparabens vc ganhou")
+print("-                                    ")
+print("-=-" * 20)
+print("OBRIGADO POR JOGAR")
+print("-=-" * 20)
