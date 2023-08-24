@@ -1,0 +1,47 @@
+def chave1(txt):
+    print("-" * 33)
+    print(txt)
+    print("-" * 33)
+
+
+
+def Arquivovivo(nome):
+    try:
+     a = open(nome, 'rt')
+     a.close()
+    except FileExistsError:
+        return False
+    else:
+        return True
+
+def ArquivoCriar(nome):
+    try:
+        a = open(nome, 'wt+')
+        a.close()
+    except:
+        print("\033[31mhouve um erro\033[m")
+    else:
+        print(f"\033[32marquivo {nome} criado com sucesso\033[m")
+
+
+
+def Lerarquivo(nome):
+    try:
+        a = open(nome, 'rt')
+    except:
+        print("erro")
+    else:
+        chave1('Pessoas cadastradas')
+        print(a.read())
+
+
+
+def menu():
+    print("-" * 33)
+    print("         MENU PRINCIPAL          ")
+    print("-" * 33)
+    print("\033[33m1 -\033[m \033[36mVer pessoas cadastradas\033[m")
+    print("\033[33m2 -\033[m \033[36mCadastrar nova pessoa\033[m")
+    print("\033[33m3 -\033[m \033[36mSair do sistema\033[m")
+    print("-" * 33)
+    # aqui esta o outro conjunto para o contador de pessoas
