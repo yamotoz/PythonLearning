@@ -1,0 +1,12 @@
+print("=" * 20)
+print("BANCO DO GUEGUEL")
+print("=" * 20)
+nota = int(input("digite sua nota para sacar:"))
+saque50 = nota / 50
+saque2 = nota / 2
+saque10 = nota / 10
+saque20 = nota / 20
+saque100 = nota / 100
+print(f"com essa nota vc consegue sacar:\n {saque50:.0f} notas de 50$ \n {saque20:.0f} notas de 20$\n {saque2:.0f} notas de 2$\n {saque100:.0f} notas de 100$\n {saque10} notas de 10$\n")
+print("-=-" * 10)
+print("\033[32mvolte sempre tenha um bom dia")
