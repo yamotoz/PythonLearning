@@ -1,0 +1,24 @@
+def fatorial(n=1, show=False):
+    """
+
+    :param n: significa o valor a ser calculado
+    :return: ele retorna o valor ja fatorado
+    """
+    f = 1
+    for c in range(n,0,-1):
+        f *= c
+        if show:
+            print(f"{f}",end="")
+            if c>1:
+                print(" x ", end="")
+            else:
+                print(" = ", end="")
+    return f
+
+
+f = int(input("digite um numero:"))
+print(fatorial(f, show=True))
+print(fatorial.__doc__)
+
+
+#calculo de fatorial em python
