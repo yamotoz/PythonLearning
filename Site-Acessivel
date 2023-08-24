@@ -1,0 +1,8 @@
+import urllib
+import urllib.request
+try:
+    site = urllib.request.urlopen('https://www.xvideos.com')
+except:
+    print("o site não esta disponivel")
+else:
+    print("o site esta disponivel")
